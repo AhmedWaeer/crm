@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # crm
 # My first Java Spring boot project
 
@@ -40,12 +41,19 @@ POST
 recordBusinessCall
 =======
 # Customer Managment System
+=======
+#  Customer Managment System
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 #  Java Spring boot project
 
 
 # General info 
 
+<<<<<<< HEAD
 The service is just a simple customer service system and can be part of customer relationship managment system(CRM). This system can perform customer CRUD operations. As well as, monitoring and recording customer business calls and actions related to this business call. The project focus is on the backend side, showing writing code skills, handling database, and developing Restful webservices and sharing them with frontend team.  
+=======
+The service is just a simple customer service system and can be part of customer relationship managment system(CRM). This system can perform customer CRUD operations. As well as, monitoring and recording customer business calls and actions related to this business call. The project focus is on the backend side, showing writing code skills, handling database, running unit testing and developing Restful webservices and sharing them with frontend team.  
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 
 ------
 
@@ -73,8 +81,11 @@ To view Swagger ui API docs
 
 > Run the server and browse to localhost:8080/swagger-ui/index.html
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 - [`POST /crmsystem/customers`](#creatCustomerUsingPOST)
 - [`DELETE /crmsystem/customers/{id}`](#deleteCustomerUsingDELETE)
 - [`GET /crmsystem/customers`](#getAllCustomersUsingGET)
@@ -83,7 +94,10 @@ To view Swagger ui API docs
 - [`POST /crmsystem/customers/{id}/calls`](#recordBusinessCallUsingPOST)
 - [`PUT /crmsystem/customers/{id}`](#updateCustomerUsingPUT)
 
+<<<<<<< HEAD
 >>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 
 # Entities
 
@@ -96,6 +110,7 @@ To view Swagger ui API docs
   "Email": "xx@x.com",
   "Telephone": 123,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "Notes": "xxx",
   "Calls": "Calls[]",
   "Actions": "Actions[]"
@@ -103,6 +118,16 @@ To view Swagger ui API docs
   "Calls": "Calls[]",
  
 >>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+=======
+
+  "Notes": "xxx",
+  "Calls": "Calls[]",
+  "Actions": "Actions[]"
+
+  "Calls": "Calls[]",
+ 
+
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 }
 ```
 
@@ -114,9 +139,14 @@ To view Swagger ui API docs
   "timestamp": datetime,
   "Notes": String
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
    "Actions": "Actions[]"
 >>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+=======
+   "Actions": "Actions[]"
+
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 }
 ```
 
@@ -131,6 +161,7 @@ To view Swagger ui API docs
   "isComplete": Boolean
 }
 ```
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Tasks:
@@ -205,6 +236,8 @@ Phase III: System Improvements
 - CI/CD
 =======
 ------
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 
 
 # Setup 
@@ -266,7 +299,10 @@ change packaging in pom.xml to War instead of jar and then run the following com
 ------
 
 the war file will be available in Target folder and ready to be deployed to Tomcat server.
+<<<<<<< HEAD
 
 
 >>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
 
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
