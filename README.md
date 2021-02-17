@@ -141,8 +141,8 @@ Edit the spring config profile src/main/resources/application.properties accordi
 
 change packaging in pom.xml to War instead of jar and then run the following command from cmd
 
-------
+
 > ./mvn install
-------
+
 
 the war file will be available in Target folder and ready to be deployed to Tomcat server.
