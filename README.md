@@ -1,10 +1,59 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# crm
+# My first Java Spring boot project
+
+## System Requirements
+
+
+- Apache Tomcat
+- Mysql
+- Maven
+
+Currently in progress:
+
+- Deploying to AWS EC2
+- API definition & integration with Frontend
+
+---
+
+# REST API Endpoints 
+GET
+​/customers
+getAllCustomers
+POST
+​/customers
+creatCustomer
+GET
+​/customers​/{id}
+The Get User Details Web Service Endpoint
+PUT
+​/customers​/{id}
+updateCustomer
+DELETE
+​/customers​/{id}
+deleteCustomer
+GET
+​/customers​/{id}​/actions
+getIncompleteActionsForCustomer
+POST
+​/customers​/{id}​/calls
+recordBusinessCall
+=======
+# Customer Managment System
+=======
 #  Customer Managment System
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 #  Java Spring boot project
 
 
 # General info 
 
+<<<<<<< HEAD
+The service is just a simple customer service system and can be part of customer relationship managment system(CRM). This system can perform customer CRUD operations. As well as, monitoring and recording customer business calls and actions related to this business call. The project focus is on the backend side, showing writing code skills, handling database, and developing Restful webservices and sharing them with frontend team.  
+=======
 The service is just a simple customer service system and can be part of customer relationship managment system(CRM). This system can perform customer CRUD operations. As well as, monitoring and recording customer business calls and actions related to this business call. The project focus is on the backend side, showing writing code skills, handling database, running unit testing and developing Restful webservices and sharing them with frontend team.  
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 
 ------
 
@@ -32,6 +81,11 @@ To view Swagger ui API docs
 
 > Run the server and browse to localhost:8080/swagger-ui/index.html
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 - [`POST /crmsystem/customers`](#creatCustomerUsingPOST)
 - [`DELETE /crmsystem/customers/{id}`](#deleteCustomerUsingDELETE)
 - [`GET /crmsystem/customers`](#getAllCustomersUsingGET)
@@ -40,6 +94,10 @@ To view Swagger ui API docs
 - [`POST /crmsystem/customers/{id}/calls`](#recordBusinessCallUsingPOST)
 - [`PUT /crmsystem/customers/{id}`](#updateCustomerUsingPUT)
 
+<<<<<<< HEAD
+>>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 
 # Entities
 
@@ -51,6 +109,16 @@ To view Swagger ui API docs
   "CompanyName": "xx",
   "Email": "xx@x.com",
   "Telephone": 123,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "Notes": "xxx",
+  "Calls": "Calls[]",
+  "Actions": "Actions[]"
+=======
+  "Calls": "Calls[]",
+ 
+>>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+=======
 
   "Notes": "xxx",
   "Calls": "Calls[]",
@@ -59,6 +127,7 @@ To view Swagger ui API docs
   "Calls": "Calls[]",
  
 
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 }
 ```
 
@@ -69,8 +138,15 @@ To view Swagger ui API docs
   "ID": String,
   "timestamp": datetime,
   "Notes": String
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+   "Actions": "Actions[]"
+>>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+=======
    "Actions": "Actions[]"
 
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 }
 ```
 
@@ -85,6 +161,83 @@ To view Swagger ui API docs
   "isComplete": Boolean
 }
 ```
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+# Tasks:
+
+Phase I: Building BE Functionality (Done)
+
+---
+
+Phase II: Build Full-Stack (Customer List/Details)
+**Target of Phase II: Online deployed link of FE connected to the BE thorugh OpenAPI**
+
+- Define API Endpoints (done)
+
+1. **GET /customers** (List)
+2. **GET /customers/{{id}}** (Details)
+   /GET /customers
+
+```
+[
+    {
+        ID: String,
+        CompanyName:
+        Email
+        Telephone
+        Notes
+    }
+]
+```
+
+/GET /customers/1234
+
+```
+{
+    ID: 1234,
+    CompanyName: xx
+    Email: xx@xx.com
+    Telephone: 123
+    Notes: xx,
+    Calls: [
+        {
+            "ID": String,
+            "timestamp": datetime,
+            "Notes": String
+        }
+    ],
+    Actions: [
+        {
+            "ID": String,
+            "details": String, //like notes
+            "requiredBy": datetime,
+            "CustomerId": Id,
+            "isComplete": Boolean
+        }
+    ]
+}
+```
+
+- Read about OpenApi (in progress)
+- Find a genrator to Generate a API **swagger** file (using OpenApi) (in progress)
+- Build Frontend (Tony) for two proposed endpoint (in progress)
+- Deploy API to online server (AWS ?)
+- Deploy Frontend (Netlify)
+- Connect Frontend with API (HTTP) (no autnetication)
+
+---
+
+Phase III: System Improvements
+
+- Secutiry
+- Authentication
+- Containerization
+- CI/CD
+=======
+------
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
 
 
 # Setup 
@@ -146,3 +299,10 @@ change packaging in pom.xml to War instead of jar and then run the following com
 ------
 
 the war file will be available in Target folder and ready to be deployed to Tomcat server.
+<<<<<<< HEAD
+
+
+>>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+
+=======
+>>>>>>> 9cc10df81f6a36530cadd444423d2c391a5cb65e
