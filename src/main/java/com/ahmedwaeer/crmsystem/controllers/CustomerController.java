@@ -28,9 +28,6 @@ import com.ahmedwaeer.crmsystem.ui.model.request.CallRequestModel;
 import com.ahmedwaeer.crmsystem.ui.model.request.CustomerDetailsRequestModel;
 import com.ahmedwaeer.crmsystem.ui.model.response.ActionRepresenation;
 import com.ahmedwaeer.crmsystem.ui.model.response.CustomerRepresentation;
-import com.ahmedwaeer.crmsystem.ui.model.request.UserDetailsRequestModel;
-import com.ahmedwaeer.crmsystem.ui.model.response.ActionRepresenation;
-import com.ahmedwaeer.crmsystem.ui.model.response.CustomerRepresenation;
 import com.ahmedwaeer.crmsystem.ui.model.response.ErrorMessages;
 import com.ahmedwaeer.crmsystem.ui.model.response.OperationStatusModel;
 import com.ahmedwaeer.crmsystem.ui.model.response.RequestOperationName;
@@ -55,37 +52,20 @@ public class CustomerController {
 		ModelMapper modelMapper = new ModelMapper();
 		CustomerDto customerDto = customerService.getCustomerById(id);
 		CustomerRepresentation returnValue = modelMapper.map(customerDto, CustomerRepresentation.class);
-	
-	@ApiOperation(value="The Get Customer Details Web Service Endpoint",
-			notes="${CustomerController.GetCustomer.ApiOperation.Notes}")
-	@GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
-	public CustomerRepresenation getCustomer(@PathVariable String id) {
-		ModelMapper modelMapper = new ModelMapper();
-		CustomerDto customerDto = customerService.getCustomerById(id);
-		CustomerRepresenation returnValue = modelMapper.map(customerDto, CustomerRepresenation.class);
-
 		return returnValue;
-
 	}
 
 	@ApiOperation(value = "The create Customer Details Web Service Endpoint")
 	@PostMapping(consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, produces = {
-			MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+			MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
 	public CustomerRepresentation creatCustomer(@RequestBody CustomerDetailsRequestModel userDetails) throws Exception {
-
-	@PostMapping(consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, produces = {
-			MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
-	public CustomerRepresenation creatCustomer(@RequestBody UserDetailsRequestModel userDetails) throws Exception {
-
 		if (userDetails.getCompanyName().isEmpty())
 			throw new CustomerServiceException(ErrorMessages.MISSING_REQUIRED_FIELD.getErrorMessage());
 		ModelMapper modelMapper = new ModelMapper();
 		CustomerDto customerDto = modelMapper.map(userDetails, CustomerDto.class);
 		CustomerDto createdCustomer = customerService.createCustomer(customerDto);
 		CustomerRepresentation returnValue = modelMapper.map(createdCustomer, CustomerRepresentation.class);
-		CustomerRepresenation returnValue = modelMapper.map(createdCustomer, CustomerRepresenation.class);
-
-
+		
 		return returnValue;
 	}
 
@@ -99,18 +79,6 @@ public class CustomerController {
 		CustomerDto customerDto = modelMapper.map(userDetails, CustomerDto.class);
 		CustomerDto updatedCustomer = customerService.updateCustomer(id, customerDto);
 		CustomerRepresentation returnValue = modelMapper.map(updatedCustomer, CustomerRepresentation.class);
-
-	@PutMapping(path = "/{id}", consumes = { MediaType.APPLICATION_XML_VALUE,
-			MediaType.APPLICATION_JSON_VALUE }, produces = { MediaType.APPLICATION_XML_VALUE,
-					MediaType.APPLICATION_JSON_VALUE })
-	public CustomerRepresenation updateCustomer(@PathVariable String id,
-			@RequestBody UserDetailsRequestModel userDetails) {
-		ModelMapper modelMapper = new ModelMapper();
-		CustomerDto customerDto = modelMapper.map(userDetails, CustomerDto.class);
-		CustomerDto updatedCustomer = customerService.updateCustomer(id, customerDto);
-		CustomerRepresenation returnValue = modelMapper.map(updatedCustomer, CustomerRepresenation.class);
-
-
 		return returnValue;
 	}
 
@@ -135,18 +103,8 @@ public class CustomerController {
 		List<CustomerDto> customers = customerService.getAllCustomers(page, limit);
 		for (CustomerDto next : customers) {
 			CustomerRepresentation customerModel = modelMapper.map(next, CustomerRepresentation.class);
-
-	@GetMapping(produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
-	public List<CustomerRepresenation> getAllCustomers(@RequestParam(value = "page", defaultValue = "0") Integer page,
-			@RequestParam(value = "limit", defaultValue = "25") Integer limit) {
-		ModelMapper modelMapper = new ModelMapper();
-		List<CustomerRepresenation> returnValue = new ArrayList<>();
-		List<CustomerDto> customers = customerService.getAllCustomers(page, limit);
-		for (CustomerDto next : customers) {
-			CustomerRepresenation customerModel = modelMapper.map(next, CustomerRepresenation.class);
 			returnValue.add(customerModel);
 		}
-
 		return returnValue;
 
 	}
