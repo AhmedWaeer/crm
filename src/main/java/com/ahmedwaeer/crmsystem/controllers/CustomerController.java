@@ -46,6 +46,7 @@ public class CustomerController {
 	private DairyManagementService dairyService;
 
 
+
 	@ApiOperation(value = "The Get Customer Details Web Service Endpoint", notes = "${CustomerController.GetCustomer.ApiOperation.Notes}")
 	@GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public CustomerRepresentation getCustomer(@PathVariable String id) {
@@ -65,7 +66,6 @@ public class CustomerController {
 		CustomerDto customerDto = modelMapper.map(userDetails, CustomerDto.class);
 		CustomerDto createdCustomer = customerService.createCustomer(customerDto);
 		CustomerRepresentation returnValue = modelMapper.map(createdCustomer, CustomerRepresentation.class);
-		
 		return returnValue;
 	}
 

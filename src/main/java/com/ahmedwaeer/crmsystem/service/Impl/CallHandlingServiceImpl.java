@@ -27,7 +27,6 @@ public class CallHandlingServiceImpl implements CallHandlingService {
 
 	@Override
 	public CallDto recordcall(String customerId, CallDto newCall) {
-
 		ModelMapper modelMapper = new ModelMapper();
 		CustomerEntity foundCustomer = customerRepository.findBycustomerId(customerId);
 		List<ActionDto> actions = newCall.getActions();
