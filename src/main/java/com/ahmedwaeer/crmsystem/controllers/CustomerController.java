@@ -65,7 +65,7 @@ public class CustomerController {
 		CustomerDto customerDto = modelMapper.map(userDetails, CustomerDto.class);
 		CustomerDto createdCustomer = customerService.createCustomer(customerDto);
 		CustomerRepresentation returnValue = modelMapper.map(createdCustomer, CustomerRepresentation.class);
-		
+
 		return returnValue;
 	}
 
@@ -79,6 +79,7 @@ public class CustomerController {
 		CustomerDto customerDto = modelMapper.map(userDetails, CustomerDto.class);
 		CustomerDto updatedCustomer = customerService.updateCustomer(id, customerDto);
 		CustomerRepresentation returnValue = modelMapper.map(updatedCustomer, CustomerRepresentation.class);
+
 		return returnValue;
 	}
 
