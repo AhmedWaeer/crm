@@ -27,7 +27,6 @@ public class CallHandlingServiceImpl implements CallHandlingService {
 
 	@Override
 	public CallDto recordcall(String customerId, CallDto newCall) {
-	public void recordcall(String customerId, CallDto newCall) {
 		ModelMapper modelMapper = new ModelMapper();
 		CustomerEntity foundCustomer = customerRepository.findBycustomerId(customerId);
 		List<ActionDto> actions = newCall.getActions();
@@ -42,8 +41,10 @@ public class CallHandlingServiceImpl implements CallHandlingService {
 		foundCustomer.addCall(addedCall);
 		CallEntity recordedCall = callRepository.save(addedCall);
 		CallDto returnValue = modelMapper.map(recordedCall, CallDto.class);
-		return returnValue;
 		callRepository.save(addedCall);
+		
+		return returnValue;
+		
 
 	}
 
