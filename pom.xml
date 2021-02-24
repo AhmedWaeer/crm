@@ -31,24 +31,14 @@
 			<scope>test</scope>
 
 		</dependency>
-	<dependency>
-
-<<<<<<< HEAD
-    <groupId>io.springfox</groupId>
-    <artifactId> springfox-boot-starter </artifactId>
-    <version>3.0.0</version>
-</dependency>
-
-
-=======
+	         <dependency>
             <groupId> io.springfox </groupId>
 
             <artifactId> springfox-boot-starter </artifactId>
 
             <version> 3.0.0 </version>
 
-</dependency>
->>>>>>> cce254d98e7153c591442e47fac9fc016c1c76f7
+               </dependency>
 		<dependency>
 
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -101,15 +91,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+	       </dependencies>
 
-	<build>
+	         <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+		       </plugins>
 	</build>
 
 </project>
