@@ -72,7 +72,6 @@ public class CustomerController {
 		CustomerDto customerDto = modelMapper.map(userDetails, CustomerDto.class);
 		CustomerDto createdCustomer = customerService.createCustomer(customerDto);
 		CustomerRepresentation returnValue = modelMapper.map(createdCustomer, CustomerRepresentation.class);
-		CustomerRepresenation returnValue = modelMapper.map(createdCustomer, CustomerRepresenation.class);
 
 		return returnValue;
 	}
