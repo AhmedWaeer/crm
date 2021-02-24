@@ -42,9 +42,8 @@ public class CallHandlingServiceImpl implements CallHandlingService {
 		CallEntity recordedCall = callRepository.save(addedCall);
 		CallDto returnValue = modelMapper.map(recordedCall, CallDto.class);
 		callRepository.save(addedCall);
-		
 		return returnValue;
-		
+	
 
 	}
 
