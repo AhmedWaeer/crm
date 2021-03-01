@@ -17,15 +17,16 @@ The service is just a simple customer service system and can be part of customer
 | Backend (REST)     | Spring Boot (Java)      |
 | REST Documentation | Swagger UI / Spring fox |
 | REST Spec          | Open API Standard       |
-| DB                 | MySQL                   |
+| DB                 | Postgresql              |
 | Persistence        | JPA (Using Spring Data) |
 | Server Build Tools | Maven(Java)             |
-| Application Server | Apache Tomcat           |
+| Backend Server     | Heroku                  |
+| Frontend Server    | NetLify                 |
 
 ------
 
 
-# REST API Endpoints 
+# REST API Endpoint
 
 To view Swagger ui API docs
 
@@ -123,18 +124,6 @@ Inside Eclipse or STS
 File -> Import -> Maven ->  Existing Maven project
 Then either build on the command line ./mvnw generate-resources or using the Eclipse launcher (right click on project and Run As -> Maven install) to generate the css. Run the application main method by right clicking on it and choosing Run As -> Java Application.
 Before development, please install the following service software:
-
-### MySQL
-
-Edit the spring config profile src/main/resources/application.properties according to your settings.
-
-### Install MySQL
-
-> service mysql start
->
-> mysql -u root -p;
->
-> create database crm;
 
 
 ### Deploying the project to Tomcat 
