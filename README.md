@@ -6,7 +6,7 @@
 
 The service is just a simple customer service system and can be part of customer relationship managment system(CRM). This system can perform customer CRUD operations. As well as, monitoring and recording customer business calls and actions related to this business call. The project focus is on the backend side, showing the following
 -  Writing code skills using Java.
--  Handling database. 
+-  Manipulate database. 
 -  Running unit and inegration testing.
 -  Developing Restful webservices and sharing them with frontend team using Swagger.
 -  Deployment of the backend code to Heroku.  
