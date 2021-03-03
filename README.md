@@ -4,7 +4,12 @@
 
 # General info 
 
-The service is just a simple customer service system and can be part of customer relationship managment system(CRM). This system can perform customer CRUD operations. As well as, monitoring and recording customer business calls and actions related to this business call. The project focus is on the backend side, showing writing code skills, handling database, running unit testing and developing Restful webservices and sharing them with frontend team.  
+The service is just a simple customer service system and can be part of customer relationship managment system(CRM). This system can perform customer CRUD operations. As well as, monitoring and recording customer business calls and actions related to this business call. The project focus is on the backend side, showing the following
+-  Writing code skills using Java.
+-  Handling database. 
+-  Running unit and inegration testing.
+-  Developing Restful webservices and sharing them with frontend team using Swagger.
+-  Deployment of the backend code to Heroku.  
 
 ------
 
@@ -21,7 +26,7 @@ The service is just a simple customer service system and can be part of customer
 | Persistence        | JPA (Using Spring Data) |
 | Server Build Tools | Maven(Java)             |
 | Backend Server     | Heroku                  |
-| Frontend Server    | NetLify                 |
+
 
 ------
 
@@ -31,7 +36,7 @@ The service is just a simple customer service system and can be part of customer
 To view Swagger ui API docs
 
 
-> Run the server and browse to localhost:8080/swagger-ui/index.html
+> Run the server and browse to https://cs-system.herokuapp.com/swagger-ui/index.html
 
 - [`POST /crmsystem/customers`](#creatCustomerUsingPOST)
 - [`DELETE /crmsystem/customers/{id}`](#deleteCustomerUsingDELETE)
@@ -40,52 +45,6 @@ To view Swagger ui API docs
 - [`GET /crmsystem/customers/{id}/actions`](#getIncompleteActionsForCustomerUsingGET)
 - [`POST /crmsystem/customers/{id}/calls`](#recordBusinessCallUsingPOST)
 - [`PUT /crmsystem/customers/{id}`](#updateCustomerUsingPUT)
-
-
-# Entities
-
-## Customer
-
-```json
-{
-  "ID": "xx",
-  "CompanyName": "xx",
-  "Email": "xx@x.com",
-  "Telephone": 123,
-
-  "Notes": "xxx",
-  "Calls": "Calls[]",
-  "Actions": "Actions[]"
-
-  "Calls": "Calls[]",
- 
-
-}
-```
-
-## Calls
-
-```json
-{
-  "ID": String,
-  "timestamp": datetime,
-  "Notes": String
-   "Actions": "Actions[]"
-
-}
-```
-
-## Actions
-
-```json
-{
-  "ID": String,
-  "details": String, //like notes
-  "requiredBy": datetime,
-  "CustomerId": Id,
-  "isComplete": Boolean
-}
-```
 
 
 # Setup 
