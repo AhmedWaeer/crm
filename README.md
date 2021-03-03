@@ -36,7 +36,7 @@ The service is just a simple customer service system and can be part of customer
 To view Swagger ui API docs
 
 
-> Run the server and browse to https://cs-system.herokuapp.com/swagger-ui/index.html
+> browse to https://cs-system.herokuapp.com/swagger-ui/index.html
 
 - [`POST /crmsystem/customers`](#creatCustomerUsingPOST)
 - [`DELETE /crmsystem/customers/{id}`](#deleteCustomerUsingDELETE)
